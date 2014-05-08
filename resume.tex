@@ -1,0 +1,150 @@
+%% Copyright 2014 Siddhanathan Shanmugam (siddhanathan@gmail.com)
+
+%% Based off the work of Xavier Danaux
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% Use moderncv
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+% Options: casual or classic; blue(default), orange, red, green, grey and roman(instead of sans serif)
+\moderncvtheme[green]{classic}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.8, top=1cm, bottom=1cm]{geometry}
+
+% width of the column with the dates
+\setlength{\hintscolumnwidth}{3.3cm}
+
+% Width of name placeholder for classic theme
+\AtBeginDocument{\setlength{\maketitlenamewidth}{7cm}}
+
+% Change name font
+\renewcommand*{\namefont}{\fontsize{26}{35}\mdseries\upshape}
+
+%\AtBeginDocument{\recomputelengths} % required when changes are made to page layout lengths
+
+%% Make cvitem contain less formatting
+%%% Taken from the file moderncvstyleclassic.sty
+\renewcommand*{\cventry}[7][.25em]{
+  \cvitem[#1]{#2}{
+    {#3}
+    \ifthenelse{\equal{#4}{}}{}{ {\slshape#4}}
+    \ifthenelse{\equal{#5}{}}{}{ #5}
+    \ifthenelse{\equal{#6}{}}{}{ #6}
+    \strut
+    \ifx&#7&
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+% personal data
+\firstname{Siddhanathan (Sid)}
+\familyname{Shanmugam}
+%% \title{Résumé}
+\address{3175 John F Kennedy Blvd, Apt 904}{Philadelphia, PA 19104}
+\mobile{+1 (267) 266-9573}
+% \phone{phone (optional)}
+% \fax{fax (optional)}
+\email{siddhanathan@gmail.com}
+\homepage{siddhanathan.github.io}
+% \extrainfo{additional information (optional)}
+%\photo[64pt]{picture} % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+% \quote{Some quote (optional)}
+
+%\nopagenumbers{} % suppress automatic page numbering for CVs longer than one page
+%-----------------------------------
+% content
+%-----------------------------------
+\begin{document}
+
+% Default title 
+\maketitle
+
+%% Simple title
+% \centerline{\fontsize{14pt}{14pt}\textbf{Siddhanathan (Sid) Shanmugam}}
+% \centerline{3301 Race Street, Room 238}
+% \centerline{Philadelphia, PA 19104}
+% \centerline{+1 267 266 9573}
+% \centerline{ss3774@drexel.edu}
+% \vspace*{-10mm}
+% \begin{center}
+% \line(1,0){490}
+% \end{center}
+% \vspace*{10mm}
+
+\vspace*{-10mm}
+
+\section{Education}
+\cventry{Drexel University}{Bachelor of Science in Computer Engineering}{}{\hfill Philadelphia, PA}{\newline\textbf{Cumulative GPA: 3.88/4.0}\hfill \mdseries Anticipated Graduation: 2018}{}
+
+\section{Honors}
+\cvline{2013-Present}{Member, Pennoni Honors College, Drexel University}
+\cvline{2013-Present}{Dean's List, Drexel University}
+\cvline{2013-Present}{A. J. Drexel Scholarship, Drexel University}
+
+\section{Skills}
+\cvline{Language}{\small English, Hindi, Tamil, Bengali, Kannada}
+\cvline{Hardware}{\small Arduino, Soldering, Kinect, Leap Motion}
+\cvline{Programming}{\small \textbf{Haskell, Scala}, Python, Java, R, Bash, OpenCV, Chuck, LISP, SQL, C++, \LaTeX}
+\cvline{Web Programming}{\small HTML, CSS, Javascript, JQuery, RShiny, Wordpress}
+\cvline{Software Tools}{\small Git, Mercurial, Emacs, Vim, Yi}
+\cvline{Computer}{\small Blender, Google Sketchup, GIMP, Inkscape}
+\cvline{Mobile}{\small Android, PhoneGap, Ubuntu Touch, FirefoxOS}
+\cvline{Operating Systems}{\small Linux, UNIX, Windows, Mac OS X, ROS}
+\cvline{Hobbies}{\small Piano, Swimming, Table Tennis, Soccer, Cricket, Drawing}
+
+\section{Experience}
+\cventry{2014-2015}{\textbf{Data Analyst,}}{CDM Inc.,}{Philadelphia, USA}{}{
+\begin{itemize}
+\item File Parsing: Writing parsers for text and binary formats.
+\item Big Data: Dealt with data which was too big to be held in memory at once.
+\item Web applications: Developed applications with RShiny deployed on the web.
+\item Cloud services: Set up a backup server for Amazon AWS instances.
+\end{itemize}
+}
+
+\cventry{2011--Present}{\textbf{Volunteer},}{Canonical Ltd.,}{London, UK}{}{
+\begin{itemize}
+\item Translations: \small Translating Ubuntu's user interface, and public documentation.
+\item Quality Assurance: \small Testing unstable software packages and finding bugs.
+\item Laptop testing: \small Testing the Linux kernel on different hardware and reporting bugs.
+\end{itemize}
+}
+
+\cventry{2011}{\textbf{Volunteer},}{Sympy Development Team,}{Google Code-In}{}{
+\begin{itemize}%
+\item Automation: \small Use Sphinx to auto-document Sympy source code.
+\end{itemize}
+}
+
+\section{Organizations}
+\cvline{2013-Present}{Vice President: Drexel University Linux User Group}
+\cvline{2013-Present}{Technical Chair: Drexel IEEE}
+\cvline{2013-Present}{Member: Drexel Robotics Club}
+\cvline{2013-Present}{Member: Drexel ASME}
+\section{Hackathons}
+\cvline{2014-2015}{Philly Codefest, 2014 and 2015}
+\cvline{2014}{Hack4Access 2014}
+\cvline{2014}{HAMR Philly 2014: Hacking Audio and Music Research}
+%\cvline{2014}{Philly Codefest 2014}
+\cvline{2014}{Global Game Jam 2014: IGDA Philly, Drexel Jam}
+%\cvline{2013}{Hackathon by Indus Net Technologies, 2013}
+\cvline{2012}{Google Code-In 2012}
+
+%\section{Languages}
+%\cvlanguage{Language 1}{Skill level}{Comment}
+%\cvlanguage{Language 2}{Skill level}{Comment}
+%\cvlanguage{Language 3}{Skill level}{Comment}
+
+%\section{Computer skills}
+%\cvcomputer{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
+%\cvcomputer{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
+%\cvcomputer{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+\end{document}
