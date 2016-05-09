@@ -1,95 +1,217 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
 %
-% Copyright (C) 2015 Siddhanathan Shanmugam
-% License: GPLv3 or later, see LICENSE
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
 %
-% Original license:
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
 %
-% Awesome CV LaTeX Template
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Configuration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Themes: Awesome-CV
-\documentclass[11pt, a4paper]{awesome-cv}
-
-%%% Override a directory location for fonts(default: 'fonts/')
-\fontdir[fonts/]
-
-%%% Configure a directory location for sections
-\newcommand*{\sectiondir}{resume/}
-
-%%% Override color
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-%% Color for highlight
-% Define your custom color if you don't like awesome colors
-\colorlet{awesome}{awesome-emerald}
-%\definecolor{awesome}{HTML}{CA63A8}
-%% Colors for text
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
-
-%%% Override a separator for social informations in header(default: ' | ')
-%\headersocialsep[\quad\textbar\quad]
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     3rd party packages
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Needed to divide into several files
-\usepackage{import}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Personal Data
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Essentials
-\name{Siddhanathan}{Shanmugam}
-\address{Philadelphia, PA 19104}
-\mobile{+please (email) for-details} 
-%%% Social
-\email{ss3774@drexel.edu}
-\homepage{siddhanathan.github.io}
-\github{siddhanathan}
-% \linkedin{posquit0}
-%%% Optionals
-\position{Student{\enskip\cdotp\enskip}Computer Science}
-% \quote{``Make the change that you want to see in the world."}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Content
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
-\makecvfooter
-  {\today}
-  {Siddhanathan Shanmugam~~~·~~~Résumé}
-  {\thepage}
-
+\documentclass[]{deedy}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
 \begin{document}
-%%% Make a header for CV with personal data
-\makecvheader
 
-%%% Import contents
-\import{\sectiondir}{education.tex}
-\import{\sectiondir}{experience.tex}
-\import{\sectiondir}{extracurricular.tex}
-\import{\sectiondir}{presentation.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
 
-\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Siddhanathan}{Shanmugam}{
+  \urlstyle{same}\href{https://github.com/siddhanathan}{github.com/siddhanathan} \\
+  \href{mailto:ss3774@drexel.edu}{ss3774@drexel.edu} | +1 (215) 730-5983
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Drexel University}
+\descript{BS in Computer Science}
+\location{June 2018 | Philadelphia, PA}
+Pennoni Honors College \\
+Dean's List
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Programming}
+\location{Preferred:}
+Haskell \textbullet{} Rust \textbullet{} Go \\
+\location{Comfortable with:}
+C \textbullet{} Assembly \textbullet{} Scala \textbullet{} SQL \\
+Java \textbullet{} HTML \textbullet CSS \textbullet{} Javascript \\
+VHDL \\
+\location{Familiar:}
+OCaml \textbullet{} Clojure \textbullet{} \LaTeX\ \\ 
+
+\sectionsep
+\subsection{Tools}
+Vi \textbullet{} Awk \textbullet{} ZSH \textbullet{} Bash \\
+tmux \textbullet{} Mosh \textbullet{} Python
+\sectionsep
+
+\subsection{Hardware}
+Soldering \textbullet{} Arduino \textbullet{} PCB Design
+\sectionsep
+
+\subsection{Theory}
+Operating Systems \\
+Compiler Design \\
+Functional Programming \\
+Communication Systems \\
+Digital Signal Processing \\
+Control Systems \\
+Computer Networks \\
+Parallel \& Concurrent Programming \\
+Unix Tools and Scripting
+\sectionsep
+
+\subsection{Language}
+English \textbullet{} Hindi \textbullet{} Tamil
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CONTRIBUTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Contributions}
+\subsection{Open Source}
+Glassgow Haskell Compiler \\
+Yi Text Editor \\
+Ubuntu \\
+Sympy \\
+NixOS \\
+Vimgolf
+\sectionsep
+
+\subsection{College}
+DragonHacks \\
+Drexel IEEE \\
+Drexel Linux Users Group \\
+Drexel Hyperloop
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Drexel University}
+\descript{| Research Assistant }
+\location{September 2015 - March 2016 | Philadelphia, PA}
+\sectionsep
+
+\runsubsection{CDM Inc.}
+\descript{| Data Analyst }
+\location{September 2014 – March 2015 | Philadelphia, PA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Wrote parsers for text and binary formats.
+\item Setup backup servers for Amazon AWS instances.
+\item Wrote statistical modelling applications with a web based user interface.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Ziria}
+\descript{| Research Assistant }
+\location{April 2015 - Present | Philadelphia, PA}
+\begin{tightemize}
+\item Worked on the Ziria project under the mentorship of Geoffrey Mainland.
+\item Ported the compiler toolchain to Linux.
+\item Profiled the C-backend for performance bottlenecks.
+\item Optimized slow sections of the C-backend.
+\item Wrote tools to auto generate performance charts.
+\item Ported DSP algorithms from C to high-level PHY descriptions in Ziria.
+\item Worked on a VHDL backend for an OFDM implementation.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Oratio}
+\descript{| Researcher}
+\location{November 2015 – Present | Philadelphia, PA}
+Worked on an algorithm for objectively classifying quality of speech in real time.
+\sectionsep
+
+\runsubsection{Hyperloop}
+\descript{| Control Systems Engineer }
+\location{September 2015 – Present | Philadelphia, PA}
+Proposed a revolutionary approach for controls to SpaceX engineers.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\subsection{Paper Touché}
+\location{ Hacking Audio and Music Research, Philly 2014 }
+A touch capacitive paper based musical synthesizer focused on
+Human Computer Interaction. Used a touch-based interface made using
+paper and graphite.
+\sectionsep
+
+\subsection{cvRecognition}
+\location{ \#Hack4Access, Philly 2014 }
+Context aware face recognition for Android. Also includes traffic light detection.
+Initially aimed towards helping people with memory loss issues, but later tweaked
+to help people who are visually impaired as well.
+\sectionsep
+
+\subsection{Dragon TMS}
+\location{ Philly Codefest 2015 }
+An automatic class schedule generating application for students of Drexel University.
+Capable of avoiding time conflicts, and ranking schedules based on user preferences.
+\sectionsep
+
+\subsection{SWMMoutGetMB}
+\location{ Philly 2015 }
+A parser for US EPA SWMM 5 binary .OUT files, with an option to export CSV data.
+The program has seen real world usage by multiple governments across the world.
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
